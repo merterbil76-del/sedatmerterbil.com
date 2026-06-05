@@ -235,6 +235,29 @@ body{
     margin-bottom:20px;
 }
 
+.career-list{
+    list-style:none;
+    margin-top:10px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.career-list li{
+    color:#cbd2dc;
+    font-size:15px;
+    padding-left:14px;
+    border-left:2px solid rgba(47,212,255,.35);
+}
+
+.career-list em{
+    color:#ffffff;
+    font-style:normal;
+    font-weight:600;
+    display:block;
+    margin-bottom:2px;
+}
+
 .soon{
     display:inline-block;
     margin-top:16px;
