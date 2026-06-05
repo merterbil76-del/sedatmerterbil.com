@@ -8,9 +8,30 @@ import { CONFIG } from '../config.js';
 export class BootScene extends Phaser.Scene {
   constructor() { super('BootScene'); }
 
+  // Gerçek resim dosyaları varsa yükle; yoksa kod ile çizilen placeholder kullanılır
+  preload() {
+    this._loaded = new Set();
+    this.load.on('filecomplete', (key) => this._loaded.add(key));
+    this.load.on('loaderror',    () => {}); // hata olursa sessizce geç
+
+    this.load.image('_img_player', 'assets/images/player.png');
+    this.load.image('_img_enemy',  'assets/images/enemy.png');
+  }
+
   create() {
-    this._makePlayer();
-    this._makeEnemy();
+    // Gerçek resim varsa kullan, yoksa placeholder çiz
+    if (this._loaded.has('_img_player')) {
+      this._useImage('_img_player', 'player');
+    } else {
+      this._makePlayer();
+    }
+
+    if (this._loaded.has('_img_enemy')) {
+      this._useImage('_img_enemy', 'enemy');
+    } else {
+      this._makeEnemy();
+    }
+
     this._makeBox();
     this._makeCoin();
     this._makeGround();
@@ -25,6 +46,12 @@ export class BootScene extends Phaser.Scene {
   }
 
   // ── helpers ──────────────────────────────────────────────────────────────
+
+  _useImage(srcKey, destKey) {
+    // Yüklenen resmi doğru texture key'i ile kaydet
+    const src = this.textures.get(srcKey).getSourceImage();
+    this.textures.addImage(destKey, src);
+  }
 
   _rt(key, w, h, drawFn) {
     const rt = this.add.renderTexture(0, 0, w, h).setVisible(false);
