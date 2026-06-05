@@ -270,6 +270,41 @@ body{
     text-align:center;
 }
 
+.contact-desc{
+    color:#d0d6df;
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.contact-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:16px;
+    font-weight:600;
+    padding:16px 30px;
+}
+
+.cv-btn{
+    border:1px solid #d4a84f;
+    color:#d4a84f;
+    border-radius:14px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.cv-btn:hover{
+    background:rgba(212,168,79,.12);
+    transform:translateY(-3px);
+}
+
 footer{
     border-top:1px solid rgba(255,255,255,.08);
     text-align:center;
