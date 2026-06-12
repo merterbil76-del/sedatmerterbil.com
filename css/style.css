@@ -266,6 +266,105 @@ body{
     border-radius:10px;
 }
 
+.app-list{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.app-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:14px;
+    padding:16px 18px;
+}
+
+.app-info{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.app-info strong{
+    color:#ffffff;
+    font-size:15px;
+}
+
+.app-info span{
+    color:#9aa3b0;
+    font-size:13px;
+    line-height:1.4;
+}
+
+.app-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    flex-shrink:0;
+}
+
+.app-guide-btn{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    background:transparent;
+    border:1px solid #2fd4ff;
+    color:#2fd4ff;
+    font-weight:700;
+    font-size:13px;
+    padding:10px 18px;
+    border-radius:10px;
+    white-space:nowrap;
+}
+
+.app-guide-btn:hover{
+    background:rgba(47,212,255,.1);
+}
+
+.app-download-btn{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    background:#d4a84f;
+    color:#09111f;
+    font-weight:700;
+    font-size:13px;
+    padding:10px 18px;
+    border-radius:10px;
+    white-space:nowrap;
+    flex-shrink:0;
+}
+
+.app-download-btn:hover{
+    background:#e0ba6a;
+}
+
+.app-screenshots{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:14px;
+}
+
+.app-screenshots img{
+    width:100%;
+    aspect-ratio:16/10;
+    object-fit:cover;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,.1);
+    transition:.3s;
+}
+
+.app-screenshots img:hover{
+    border-color:#d4a84f;
+    transform:scale(1.03);
+}
+
 .contact{
     text-align:center;
 }
