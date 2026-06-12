@@ -272,6 +272,14 @@ body{
     color:inherit;
 }
 
+.card-link h4{
+    color:#ffffff;
+}
+
+.card-link p{
+    color:#cbd2dc;
+}
+
 .card-go{
     display:inline-block;
     margin-top:16px;
@@ -361,16 +369,17 @@ body{
 .app-screenshots-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:14px;
+    gap:10px;
 }
 
 .app-screenshots-grid img{
     width:100%;
     aspect-ratio:16/10;
     object-fit:cover;
-    border-radius:12px;
+    border-radius:10px;
     border:1px solid rgba(255,255,255,.1);
     transition:.3s;
+    max-height:160px;
 }
 
 .app-screenshots-grid img:hover{
