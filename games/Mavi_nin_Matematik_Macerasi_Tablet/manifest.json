@@ -1,0 +1,17 @@
+{
+  "name": "Mavi'nin Matematik Macerasi",
+  "short_name": "Mavi Oyun",
+  "description": "Eğlenceli matematik platform oyunu",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#6fc9f7",
+  "theme_color": "#6fc9f7",
+  "icons": [
+    {
+      "src": "player.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ]
+}

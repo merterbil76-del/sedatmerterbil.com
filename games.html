@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mavi'nin Matematik Macerası | Sedat Mert Erbil</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .game-hero {
+      text-align: center;
+      padding: 140px 8% 60px;
+      background:
+        radial-gradient(circle at 15% 30%, rgba(76, 217, 100, .15), transparent 35%),
+        radial-gradient(circle at 85% 25%, rgba(255, 204, 0, .12), transparent 30%),
+        radial-gradient(circle at 50% 80%, rgba(47, 212, 255, .10), transparent 35%),
+        #050b16;
+    }
+
+    .game-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #4cd964, #2fd4ff);
+      color: #09111f;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 6px 18px;
+      border-radius: 20px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .game-hero h1 {
+      font-size: 56px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 30%, #2fd4ff 70%, #4cd964);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .game-hero .game-subtitle {
+      font-size: 20px;
+      color: #bfc6d1;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .game-features {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .game-feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      padding: 10px 20px;
+      border-radius: 14px;
+      font-size: 14px;
+      color: #d0d6df;
+    }
+
+    .game-feature .feat-icon {
+      font-size: 20px;
+    }
+
+    .game-screenshots {
+      padding: 40px 8% 20px;
+    }
+
+    .game-screenshots h3 {
+      text-align: center;
+      color: #d4a84f;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+      font-size: 14px;
+    }
+
+    .screenshots-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .screenshot-wrapper {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,.1);
+      transition: .3s;
+      background: rgba(255,255,255,.03);
+    }
+
+    .screenshot-wrapper:hover {
+      border-color: #2fd4ff;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(47, 212, 255, .15);
+    }
+
+    .screenshot-wrapper img {
+      width: 100%;
+      display: block;
+    }
+
+
+    .game-play-section {
+      padding: 50px 8% 80px;
+      text-align: center;
+    }
+
+    .play-section-title {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .play-section-desc {
+      color: #9aa3b0;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    .play-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .play-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 40px;
+      border-radius: 18px;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: .3s;
+      min-width: 220px;
+      justify-content: center;
+    }
+
+    .play-btn:hover {
+      transform: translateY(-4px);
+    }
+
+    .play-btn-web {
+      background: linear-gradient(135deg, #2fd4ff, #1a9fd4);
+      color: #09111f;
+      box-shadow: 0 8px 30px rgba(47, 212, 255, .3);
+    }
+
+    .play-btn-web:hover {
+      box-shadow: 0 12px 40px rgba(47, 212, 255, .45);
+    }
+
+    .play-btn-tablet {
+      background: linear-gradient(135deg, #4cd964, #34b44d);
+      color: #09111f;
+      box-shadow: 0 8px 30px rgba(76, 217, 100, .3);
+    }
+
+    .play-btn-tablet:hover {
+      box-shadow: 0 12px 40px rgba(76, 217, 100, .45);
+    }
+
+    .play-btn svg {
+      flex-shrink: 0;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #9aa3b0;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 24px;
+      transition: .3s;
+    }
+
+    .back-link:hover {
+      color: #2fd4ff;
+    }
+
+    @media (max-width: 700px) {
+      .game-hero {
+        padding: 100px 7% 40px;
+      }
+
+      .game-hero h1 {
+        font-size: 36px;
+      }
+
+      .game-hero .game-subtitle {
+        font-size: 17px;
+      }
+
+      .screenshots-container {
+        grid-template-columns: 1fr;
+      }
+
+      .play-btn {
+        width: 100%;
+        min-width: unset;
+      }
+
+      .play-section-title {
+        font-size: 28px;
+      }
+
+      .game-features {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">SME</div>
+  <nav>
+    <a href="index.html#home">Ana Sayfa</a>
+    <a href="index.html#about">Hakkımda</a>
+    <a href="index.html#career">Kariyer</a>
+    <a href="index.html#projects">Projeler</a>
+    <a href="index.html#contact">İletişim</a>
+  </nav>
+</header>
+
+<section class="game-hero">
+  <a href="index.html#projects" class="back-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    Projelere Dön
+  </a>
+  <div class="game-badge">Eğitici Oyun</div>
+  <h1>Mavi'nin Matematik Macerası</h1>
+  <p class="game-subtitle">
+    Matematik öğrenmenin en eğlenceli yolu! Platformlar arasında zıpla, canavarlardan kaç,
+    matematik sorularını çöz ve yeni seviyelerin kilidini aç.
+  </p>
+  <div class="game-features">
+    <div class="game-feature">
+      <span class="feat-icon">🎮</span>
+      Platform Macerası
+    </div>
+    <div class="game-feature">
+      <span class="feat-icon">🧮</span>
+      Matematik Soruları
+    </div>
+    <div class="game-feature">
+      <span class="feat-icon">👾</span>
+      Boss Savaşları
+    </div>
+    <div class="game-feature">
+      <span class="feat-icon">📱</span>
+      Tablet Uyumlu
+    </div>
+  </div>
+</section>
+
+<section class="game-screenshots">
+  <h3>Ekran Görüntüleri</h3>
+  <div class="screenshots-container">
+    <div class="screenshot-wrapper">
+      <img src="games/oyun_gorsel_1.png" alt="Mavi'nin Matematik Macerası - Oyun ekranı" loading="lazy">
+    </div>
+    <div class="screenshot-wrapper">
+      <img src="games/oyun_gorsel_2.png" alt="Mavi'nin Matematik Macerası - Boss savaşı" loading="lazy">
+    </div>
+    <div class="screenshot-wrapper">
+      <img src="games/oyun_gorsel_3.png" alt="Mavi'nin Matematik Macerası - Matematik sorusu" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="game-play-section">
+  <h2 class="play-section-title">Hemen Oynamaya Başla!</h2>
+  <p class="play-section-desc">Cihazına uygun sürümü seç ve maceraya atıl.</p>
+  <div class="play-buttons">
+    <a href="games/Mavi_nin_Matematik_Macerasi/" class="play-btn play-btn-web">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+      Web'de Oyna
+    </a>
+    <a href="games/Mavi_nin_Matematik_Macerasi_Tablet/" class="play-btn play-btn-tablet">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="12" x2="12.01" y1="18" y2="18"/></svg>
+      Tablette Oyna
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">SME</div>
+  <p>&copy; 2026 Sedat Mert Erbil. Tüm hakları saklıdır.</p>
+</footer>
+
+</body>
+</html>

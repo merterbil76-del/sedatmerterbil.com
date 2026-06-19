@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mavi'nin Matematik Macerasi</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6fc9f7">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="game-shell" aria-label="Mavi'nin Matematik Macerasi">
+      <section class="hud" aria-label="Oyun bilgileri">
+        <div class="hud-group">
+          <span class="hud-label">Puan</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="hud-group">
+          <span class="hud-label">Kalp</span>
+          <strong id="lives" class="hearts" aria-label="3 kalp"></strong>
+        </div>
+        <div class="hud-group shield-pill" id="shieldPill">
+          <span class="hud-label">Kalkan</span>
+          <strong id="shieldTimer">Pasif</strong>
+        </div>
+        <div class="hud-group">
+          <span class="hud-label">Seviye</span>
+          <strong id="levelText">1</strong>
+        </div>
+      </section>
+
+      <canvas id="game" width="1280" height="720" aria-label="2D matematik platform oyunu"></canvas>
+
+      <section class="controls" aria-label="Kontroller" hidden>
+        <span>A / Sol</span>
+        <span>D / Sag</span>
+        <span>W / Space</span>
+      </section>
+
+      <dialog id="questionDialog" class="question-dialog">
+        <form method="dialog" id="questionForm">
+          <span class="dialog-kicker">Matematik Kutusu</span>
+          <h1 id="questionText">13 + 22</h1>
+          <div class="question-timer" aria-label="Soru suresi">
+            <div id="questionTimerFill"></div>
+          </div>
+          <span id="questionTimerText" class="question-time-text">30 sn</span>
+          <label for="answerInput">Cevap</label>
+          <div class="answer-row">
+            <input id="answerInput" type="number" inputmode="numeric" autocomplete="off" required>
+            <button id="answerButton" type="submit">Kontrol Et</button>
+          </div>
+          <p id="questionFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </dialog>
+
+      <dialog id="gameOverDialog" class="game-over-dialog">
+        <form method="dialog" id="gameOverForm">
+          <span class="dialog-kicker" id="resultKicker">Oyun Bitti</span>
+          <h1 id="resultTitle">Skor</h1>
+          <strong id="finalScore">0</strong>
+          <label for="playerNameInput">Oyuncu Adi</label>
+          <input id="playerNameInput" class="name-input" type="text" maxlength="16" autocomplete="name" value="Oyuncu">
+          <p id="savedScoreStatus" class="saved-score-status" role="status" aria-live="polite"></p>
+          <section class="scoreboard" aria-label="En yuksek skorlar">
+            <h2>En Yuksek 10</h2>
+            <ol id="highScoresList"></ol>
+          </section>
+          <button id="restartButton" type="submit">Yeniden Baslat</button>
+        </form>
+      </dialog>
+
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+      <div id="touchControls" class="touch-controls" aria-hidden="true">
+        <div class="touch-dpad">
+          <button id="touchLeft"  class="touch-btn" type="button">&#9664;</button>
+          <button id="touchRight" class="touch-btn" type="button">&#9654;</button>
+        </div>
+        <button id="touchJump" class="touch-btn touch-jump-btn" type="button">&#9650;</button>
+      </div>
+    </main>
+
+    <script src="game.js?v=boss-cinematic-2"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js');
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+127.0.0.1 - - [16/Jun/2026 18:23:18] "HEAD / HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jun/2026 18:23:19] "GET /?v=boss-cinematic-2 HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jun/2026 18:23:19] "GET /styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jun/2026 18:23:19] "GET /game.js?v=boss-cinematic-2 HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jun/2026 18:23:20] "GET /player_spritesheet_clean.png HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jun/2026 18:23:20] "GET /enemy_boss_clean.png?v=boss-cinematic-2 HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jun/2026 18:23:20] "GET /enemy_boss_3_clean.png?v=boss-cinematic-2 HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jun/2026 18:23:20] "GET /enemy_boss_2_clean.png?v=boss-cinematic-2 HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jun/2026 18:23:20] "GET /enemy.png HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jun/2026 18:23:20] "GET /player.png HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jun/2026 18:23:20] "GET /enemy_boss_4_clean.png?v=boss-cinematic-2 HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jun/2026 18:23:24] code 404, message File not found
+127.0.0.1 - - [16/Jun/2026 18:23:24] "GET /favicon.ico HTTP/1.1" 404 -

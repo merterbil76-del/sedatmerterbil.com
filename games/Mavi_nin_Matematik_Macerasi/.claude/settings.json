@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp -r /Users/sedatmerterbil/Desktop/Mavi_nin_Matematik_Macerasi /Users/sedatmerterbil/Desktop/Mavi_nin_Matematik_Macerasi_Tablet)",
+      "Read(//Users/sedatmerterbil/Desktop/Mavi_nin_Matematik_Macerasi_Tablet/**)",
+      "Bash(mv /Users/sedatmerterbil/Desktop/Mavi_nin_Matematik_Macerasi_Tablet/Mavi_nin_Matematik_Macerasi/* /Users/sedatmerterbil/Desktop/Mavi_nin_Matematik_Macerasi_Tablet/)",
+      "Bash(rmdir /Users/sedatmerterbil/Desktop/Mavi_nin_Matematik_Macerasi_Tablet/Mavi_nin_Matematik_Macerasi)",
+      "Bash(rm -rf /Users/sedatmerterbil/Desktop/Mavi_nin_Matematik_Macerasi_Tablet/Mavi_nin_Matematik_Macerasi && ls /Users/sedatmerterbil/Desktop/Mavi_nin_Matematik_Macerasi_Tablet/)",
+      "Bash(chmod +x /Users/sedatmerterbil/Desktop/Mavi_nin_Matematik_Macerasi_Tablet/Tablet_Sunucu_Baslat.command)",
+      "Bash(grep -c \"\" /tmp/test 2>/dev/null; df -h /Users/sedatmerterbil/Desktop/ | tail -1)",
+      "Read(//tmp/**)"
+    ],
+    "additionalDirectories": [
+      "/Users/sedatmerterbil/Desktop/Mavi_nin_Matematik_Macerasi_Tablet/Mavi_nin_Matematik_Macerasi",
+      "/Users/sedatmerterbil/Desktop/Mavi_nin_Matematik_Macerasi_Tablet"
+    ]
+  }
+}
